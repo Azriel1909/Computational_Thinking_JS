@@ -33,3 +33,5 @@ forward( 30 )
 right( 90 - slope )
 pendown()
 forward( 40 )
+
+// Ladder 2 - 2  
