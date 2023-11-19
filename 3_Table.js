@@ -23,11 +23,11 @@ left(180)
 
 for (i = 0; i < 4 + 1; i++) {
     pendown()
-    forward(100)
+    forward(140)
     penup()
     right(180)
-    forward(100)
-    left(90)
-    forward(140/5)
-    left(90)
+    forward(140)
+    right(90)
+    forward(100/4)
+    right(90)
 }
