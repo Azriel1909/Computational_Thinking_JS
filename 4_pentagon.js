@@ -11,3 +11,10 @@ for( i=0; i<9; i++ ){   // See change here?
     forward( 50 )
     right( 45 )         // and here?
 }
+
+// Draw a circle
+pendown()
+for( i=0; i< 40; i++ ){   // 8 sides
+    forward( 10 )
+    right( 10 )         // 45 x 8 = 360
+}
