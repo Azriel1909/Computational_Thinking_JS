@@ -20,7 +20,7 @@ for( i=0; i<cols + 1; i++ ){
 
 // Move turtle back to the starting position
 left( 90 )
-forward( width + (width / 5) )
+forward( width + (width / cols) )
 left( 180 )
 
 // Draw the rows / horizontal lines
