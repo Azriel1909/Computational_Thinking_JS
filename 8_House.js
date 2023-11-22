@@ -175,11 +175,33 @@ function windows(){
   left(90)
 }
 
+function door() {
+  forward(200/2 - 20)
+  left(90)
+  pendown()
+  forward(50)
+  right(90)
+  forward(40)
+  right(90)
+  forward(50)
+  right(90)
+  penup()
+  forward(10)
+  right(90)
+  forward(50-30)
+  for( i=0; i< 40; i++ ){ 
+    pendown()
+    forward( 0.3 )
+    right( 10 )         
+  }
+}
+
 // Main program
 
 walls()
 roof()
 chimney()
 windows()
+door()
 
 // Structure of the program
