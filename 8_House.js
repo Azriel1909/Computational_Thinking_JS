@@ -60,6 +60,7 @@ function walls(){
 }
 
 function roof(){
+  console.log('Calling the roof()')
   penup()
   forward(200)
   left(90)
@@ -83,6 +84,7 @@ function roof(){
 }
 
 function chimney(){
+  console.log('Calling the chimney()')
   penup()
   forward(200 + 10)
   right(90)
@@ -135,6 +137,7 @@ function chimney(){
 }
 
 function aWindow(){
+  console.log('Calling the aWindow()')
   penup()
   pendown()
   for( i=0; i<4; i++ ){
@@ -144,6 +147,7 @@ function aWindow(){
 }
 
 function windows(){
+  console.log('Calling the windows()')
   penup()
   forward(170)
   right(90)
@@ -176,6 +180,7 @@ function windows(){
 }
 
 function door() {
+  console.log('Calling the door()')
   forward(200/2 - 20)
   left(90)
   pendown()
