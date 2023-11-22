@@ -22,6 +22,18 @@ function axes(x,y,length){
   forward(length)
 }
 
+// Drawing bars
+function bars(x,y,w){
+  for(i=0; i<6;i++){
+    goto(x,y)
+    angle(0)
+    rectangleNoBase(x,y,10,40)
+    forward(w)
+    x = x + 15
+  }
+}
+
 // * Main program
 
 axes(0,0,100)
+bars(5,0,20)
