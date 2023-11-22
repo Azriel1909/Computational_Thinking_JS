@@ -134,13 +134,45 @@ function chimney(){
   left(180)
 }
 
-function aWindow() {
+function aWindow(){
   penup()
   pendown()
   for( i=0; i<4; i++ ){
     forward( 40 )
     right( 90 )
   }
+}
+
+function windows(){
+  penup()
+  forward(170)
+  right(90)
+  aWindow()
+  penup()
+  forward(40 + 40)
+  aWindow()
+  penup()
+  forward(40 + 40)
+  aWindow()
+  penup()
+  left(180)
+  forward(200 - 40)
+  left(90)
+  forward(100)
+  penup()
+  left(90)
+  aWindow()
+  penup()
+  forward(80 + 80)
+  aWindow()
+  penup()
+
+  // Return to the beginning place of the turtle 
+  left(180)
+  forward(200 - 40)
+  left(90)
+  forward(70)
+  left(90)
 }
 
 // Main program
