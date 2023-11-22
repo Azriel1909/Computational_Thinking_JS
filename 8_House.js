@@ -121,7 +121,7 @@ function chimney(){
   forward(10)
   right(90)
   forward(10)
-  
+
   // Return to the beginning place of the turtle 
   penup()
   forward(40)
@@ -134,10 +134,20 @@ function chimney(){
   left(180)
 }
 
+function aWindow() {
+  penup()
+  pendown()
+  for( i=0; i<4; i++ ){
+    forward( 40 )
+    right( 90 )
+  }
+}
+
 // Main program
 
 walls()
 roof()
 chimney()
+windows()
 
 // Structure of the program
