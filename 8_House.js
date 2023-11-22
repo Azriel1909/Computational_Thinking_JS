@@ -37,6 +37,7 @@ function walls(){
 
   console.log('Calling the walls()')
   // Drawing the big square
+  pendown()
   for( i=0; i<4; i++ ){
     forward( 200 )
     right( 90 )
@@ -59,11 +60,31 @@ function walls(){
 }
 
 function roof(){
+  penup()
+  forward(200)
+  left(90)
+  pendown()
+  forward(30)
+  right(90)
+  forward(10)
+  right(90)
+  forward(260)
+  right(90)
+  forward(10)
+  right(90)
+  forward(30)
   
+  // Return to the beginning place of the turtle
+  penup()
+  forward(200)
+  left(90)
+  forward(200)
+  left(180)
 }
 
 // Main program
 
 walls()
+roof()
 
 // Structure of the program
