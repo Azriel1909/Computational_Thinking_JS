@@ -73,7 +73,7 @@ function roof(){
   forward(10)
   right(90)
   forward(30)
-  
+
   // Return to the beginning place of the turtle
   penup()
   forward(200)
@@ -82,9 +82,62 @@ function roof(){
   left(180)
 }
 
+function chimney(){
+  penup()
+  forward(200 + 10)
+  right(90)
+  forward (230 - 100)
+  pendown()
+  
+  for( i=0; i<4; i++ ){
+    forward( 40 )
+    left( 90 )
+  }
+  penup()
+  left(90)
+  forward(40)
+  left(-90)
+  for (i=0; i<5; i++) {
+    pendown()
+    forward(40)
+    penup()
+    right(180)
+    forward(40)
+    left(90)
+    forward(40/5)
+    left(90)
+  }
+  penup()
+  left(90)
+  forward(40)
+  left(90)
+  pendown()
+  forward(10)
+  right(90)
+  forward(10)
+  right(90)
+  forward(60)
+  right(90)
+  forward(10)
+  right(90)
+  forward(10)
+  
+  // Return to the beginning place of the turtle 
+  penup()
+  forward(40)
+  left(90)
+  forward(40)
+  right(90)
+  forward(130)
+  left(90)
+  forward(210)
+  left(180)
+}
+
 // Main program
 
 walls()
 roof()
+chimney()
 
 // Structure of the program
