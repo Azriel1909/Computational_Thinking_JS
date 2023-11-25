@@ -2,27 +2,47 @@
 
 function rectangleNoBase( startX, startY, width, height ){
   goto( startX, startY )
-  angle( 0 )
-  pendown()
-  for(i=0; i<4; i++){
+  for(i=0; i<2; i++){
     forward(height)
     right(90)
     forward(width)
     right(90)
   }
-  penup()
 }
 
 function background(){
   // Static part of the program
   angle(0)
-  rectangleNoBase(0,0,50,250)
+  rectangleNoBase(-5,-125,20,250)
 }
 
-function moving(startX, startY, step){
-  goto(st)
+let x = -120
+let step = 3
+
+function moving(){
+  goto(-5, x)
+  angle(90)
+  forward(20)
+  x = x + step
+  if (x >= 120){
+    step = -step
+  }
+  if (x <= -120){
+    stopAnimate()
+  }
+}
+
+function drawing() {
+  redrawOnMove(false)
+  clear()
+  background()
+  moving()
+  redrawOnMove(true)
 }
 
 // Main Program
 
-background()
+reset()
+hideTurtle()
+pendown()
+animate(drawing, 100)
