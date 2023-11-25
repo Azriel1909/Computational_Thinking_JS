@@ -67,11 +67,21 @@ function topOfTheCup(l,a){
 	forward(l)
 }
 
+function cupPlate(y,l){
+  penup()
+  goto(0,y)
+  angle(0)
+  pendown()
+  right(90)
+  forward(l)
+}
+
 // Main program
 
 penup()
 cup(0,0,100)
 topOfTheCup(130,90)
+cupPlate(-75,60)
 hideTurtle()
 
 // * Test
