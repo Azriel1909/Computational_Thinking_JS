@@ -22,7 +22,27 @@ function circle(x,y,r){
 }
 
 // Moving Part
+let radius = 0
 function moving(){
+  // The radius is going to be bigger each time
   circle(0,0,radius)
+  // Updating radius
   radius = radius + 2
+
+  if(radius >=50){
+    stopAnimate()
+  }
 }
+
+function drawing(){
+  redrawOnMode(false)
+  clear()
+  moving()
+  redrawOnMode(true)
+}
+
+// > Main program
+
+reset()
+pendown()
+animate(drawing, 100)
