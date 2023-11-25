@@ -4,9 +4,13 @@ const spokeIncrement = 15
 let count = 0
 
 function movingPart(){
-  angle( spokeAngle )
-  goto( 0,0 )
-  forward( spokeLength )
+  let a = spokeAngle
+  for( i=0; i<4; i++ ){
+    angle( a )
+    goto( 0,0 )
+    forward( spokeLength )
+    a = a + 90
+  }
   
   spokeAngle = spokeAngle + spokeIncrement
   count = count + 1
