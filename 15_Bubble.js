@@ -45,4 +45,4 @@ function drawing(){
 
 reset()
 pendown()
-animate(drawing, 100)
+animate(drawing, 500)
