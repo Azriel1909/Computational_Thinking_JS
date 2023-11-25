@@ -58,6 +58,26 @@ function cup(x,y,r){
   penup()
 }
 
+function handle(x,y,r){
+  goto(x,y)
+  angle(180)
+  forward(r)
+  right(60)
+
+  // Determine how many segments needed
+  const segments = 10 + r/3
+  const deltaAngle = 200/segments
+  const deltaLength = 2*Math.PI*r/segments
+
+  // Drawing the circle with a lot of straight lines
+  pendown()
+  for(let i=0; i<segments; i++){
+    forward(deltaLength)
+    right(deltaAngle)
+  }
+  penup()
+}
+
 // + a = angle
 // + l = length
 
@@ -79,6 +99,7 @@ function cupPlate(y,l){
 // Main program
 
 penup()
+handle(-30,-30,10)
 cup(0,0,100)
 topOfTheCup(130,90)
 cupPlate(-75,60)
